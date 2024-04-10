@@ -1,0 +1,1 @@
+Most of the used original dynamic graph datasets come from Towards Better Evaluation for Dynamic Link Prediction, which can be downloaded from https://zenodo.org/records/7213796#.Y1cO6y8r30o
