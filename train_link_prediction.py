@@ -333,7 +333,7 @@ if __name__ == "__main__":
 
                 # positive_emb = model[1](input_1=batch_src_node_embeddings, input_2=batch_dst_node_embeddings)
                 # negative_emb = model[1](input_1=batch_neg_src_node_embeddings, input_2=batch_neg_dst_node_embeddings)
-                if args.aug=='UmmU':
+                if args.aug=='UMIP':
                     aug_layer=DistributionUncertainty()
                     aug_positive_emb=aug_layer(positive_emb)
                     aug_negative_emb=aug_layer(negative_emb)
@@ -350,7 +350,7 @@ if __name__ == "__main__":
                     loss=pred_loss
                     # loss=pred_loss+contrastive_loss
 
-                elif args.aug=='allUmmU' or args.aug=='dsu':
+                elif args.aug=='allUMIP' or args.aug=='dsu':
                     aug_layer=DistributionUncertainty()
                     aug_positive_emb=aug_layer(positive_emb)
                     aug_negative_emb=aug_layer(negative_emb)
